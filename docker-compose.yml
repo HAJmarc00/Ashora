@@ -1,0 +1,19 @@
+services:
+  ashora_postgresql:
+    image: postgres:latest
+    container_name: ashora_postgresql
+    volumes:
+      - ashora_postgresql:/var/lib/postgresql/data
+    restart: always
+    env_file: .env
+    ports:
+      - "5432:5432"
+    networks:
+      - ashora_network
+
+volumes:
+  ashora_postgresql:
+    external: true
+networks:
+  ashora_network:
+    external: true

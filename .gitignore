@@ -1,2 +1,12 @@
 # db 
 db.sqlite3
+
+# virtual environment
+venv/
+ashora/__pycache__/
+
+# migrations
+ashora/migrations/
+
+# static files
+files/
