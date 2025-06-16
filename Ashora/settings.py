@@ -131,7 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CKEditor settings
 # static files settings
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = 'static/'
 
 # ckeditor
