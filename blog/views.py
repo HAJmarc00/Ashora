@@ -38,3 +38,33 @@ class IndexPage(TemplateView):
     
 class ContactPage(TemplateView):
     template_name = 'page-contact.html'
+
+class AboutPage(TemplateView):
+    template_name = 'page-about.html'
+
+class CategoryPage(TemplateView):
+    template_name = 'category.html'
+
+    # def get(self, request, **kwargs):
+    #     categories = Category.objects.all()
+    #     category_data = []
+
+    #     for category in categories:
+    #         articles = Article.objects.filter(category=category).order_by('-created_at')[:3]
+    #         article_data = []
+    #         for article in articles:
+    #             article_data.append({
+    #                 'title': article.title,
+    #                 'cover': article.cover.url,
+    #                 'created_at': article.created_at.strftime('%Y-%m-%d %H:%M:%S'),
+    #             })
+    #         category_data.append({
+    #             'title': category.title,
+    #             'cover': category.cover.url,
+    #             'articles': article_data
+    #         })
+
+    #     context = {
+    #         'category_data': category_data
+    #     }
+    #     return render(request, self.template_name, context)
