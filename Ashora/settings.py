@@ -129,7 +129,6 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CKEditor settings
 # static files settings
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
@@ -140,3 +139,7 @@ STATICFILES_DIRS = [
 # ckeditor
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+# media settings
+MEDIA_URL = 'files/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '')
