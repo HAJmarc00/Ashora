@@ -32,4 +32,6 @@ if settings.DEBUG:
     urlpatterns += static('contact/static/', document_root=settings.STATIC_ROOT)
     urlpatterns += static('about/static/', document_root=settings.STATIC_ROOT)
     urlpatterns += static('category/static/', document_root=settings.STATIC_ROOT)
+    urlpatterns += static('single-standard/static/', document_root=settings.STATIC_ROOT)
+    urlpatterns += static('style-guide/static/', document_root=settings.STATIC_ROOT)
 

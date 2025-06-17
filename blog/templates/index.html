@@ -128,20 +128,20 @@
 
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
-                            <a href="single-standard.html" class="item-entry__thumb-link">
+                            <a href="{% url 'single-standard' %}" class="item-entry__thumb-link">
                                 <img src="{{ article.cover }}" alt="" style="width: 450px; height: 250px;">
                             </a>
                         </div>
 
                         <div class="item-entry__text">
                             <div class="item-entry__cat">
-                                <a href="category.html">{{ article.category }}</a>
+                                <a href="{% url 'category' %}">{{ article.category }}</a>
                             </div>
 
-                            <h1 class="item-entry__title"><a href="single-standard.html">{{ article.title }}</a></h1>
+                            <h1 class="item-entry__title"><a href="{% url 'single-standard' %}">{{ article.title }}</a></h1>
 
                             <div class="item-entry__date">
-                                <a href="single-standard.html">{{ article.created_at }}</a>
+                                <a href="{% url 'single-standard' %}">{{ article.created_at }}</a>
                             </div>
                         </div>
                     </div> <!-- item-entry -->

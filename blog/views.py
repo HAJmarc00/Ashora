@@ -43,6 +43,7 @@ class AboutPage(TemplateView):
     template_name = 'page-about.html'
 
 class CategoryPage(TemplateView):
+
     template_name = 'category.html'
 
     # def get(self, request, **kwargs):
@@ -67,4 +68,22 @@ class CategoryPage(TemplateView):
     #     context = {
     #         'category_data': category_data
     #     }
+    #     return render(request, self.template_name, context)
+
+class SingleStandardPage(TemplateView):
+    template_name = 'single-standard.html'
+
+    # def get(self, request, **kwargs):
+    #     article_id = kwargs.get('article_id')
+    #     article = Article.objects.get(id=article_id)
+    #     context = {
+    #         'article': article
+    #     }
+    #     return render(request, self.template_name, context)
+
+class StyleGuidePage(TemplateView):
+    template_name = 'style-guide.html'
+
+    # def get(self, request, **kwargs):
+    #     context = {}
     #     return render(request, self.template_name, context)
