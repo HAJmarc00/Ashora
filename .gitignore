@@ -10,4 +10,4 @@ ashora/migrations/
 
 # static files
 files/
-staticfiles/
+staticfiles/ 

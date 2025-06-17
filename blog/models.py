@@ -26,6 +26,8 @@ class Article(models.Model):
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=datetime.now, blank=False, null=False)
     category = models.ForeignKey('Category', on_delete=models.PROTECT, blank=False, null=False)
+    promote = models.BooleanField(default=False, blank=False , null=False)
+
 
 class Category(models.Model):
     title = models.CharField(max_length=128, blank=False, null=False)
