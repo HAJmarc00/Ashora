@@ -8,13 +8,13 @@ class UserProfileAdmin(admin.ModelAdmin):
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'created_at', 'category')
+    list_display = ('id', 'title', 'author', 'created_at', 'category')
     search_fields = ('title', 'author__user__username', 'category__title')
     list_filter = ('category', 'created_at')
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('title',)
+    list_display = ('id', 'title')
     search_fields = ('title',)
     prepopulated_fields = {'title': ('title',)}
     
