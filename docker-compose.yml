@@ -1,4 +1,20 @@
 services:
+  ashora:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/ashora
+      - ashora_static_volume:/ashora/static
+      - ashora_file_volume:/ashora/files
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - ashora_network
+      - nginx-network
+    depends_on:
+      - ashora_postgresql
   ashora_postgresql:
     image: postgres:latest
     container_name: ashora_postgresql
@@ -14,6 +30,12 @@ services:
 volumes:
   ashora_postgresql:
     external: true
+  ashora_static_volume:
+    external: true
+  ashora_file_volume:
+    external: true
 networks:
   ashora_network:
+    external: true
+  nginx-network:
     external: true
